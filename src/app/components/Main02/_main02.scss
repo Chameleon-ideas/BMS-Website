@@ -1,0 +1,151 @@
+@import "../../globalStyling/mixin";
+@import "../../globalStyling/variables";
+
+.main02 {
+  //   border: 2px solid red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 55px 0px;
+
+  .for-center-main02 {
+    // border: 2px solid blue;
+    max-width: 1600px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-image: url("/pics/purple-circle.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 45px;
+    border-radius: 30px;
+
+    @include breakpoint(desktop) {
+      width: 90%;
+    }
+
+    @include breakpoint(laptop) {
+      // padding: 35px;
+      width: 95%;
+    }
+
+    @include breakpoint(mobile-lg) {
+      width: 90%;
+    }
+
+    .upper-div {
+      // border: 2px solid green;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 120px;
+
+      @include breakpoint(desktop) {
+        margin-bottom: 100px;
+      }
+
+      @include breakpoint(laptop-md) {
+        margin-bottom: 100px;
+      }
+
+      @include breakpoint(tablet) {
+        margin-bottom: 90px;
+      }
+
+      @include breakpoint(mobile-lg) {
+        margin-bottom: 85px;
+      }
+
+      @include breakpoint(mobile) {
+        margin-bottom: 75px;
+      }
+
+      @include breakpoint(mobile-xxs) {
+        margin-bottom: 65px;
+      }
+
+      .white-capsule {
+        // border: 2px solid red;
+        padding: 7px 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 20px;
+        background-color: rgba(255, 255, 255, 0.09);
+        margin-bottom: 40px;
+
+        h4 {
+          font-size: 14px;
+          text-align: center;
+          color: #f9eb57;
+        }
+      }
+
+      h2 {
+        font-size: 52px;
+        text-align: center;
+        width: 85%;
+        line-height: 1.2;
+        padding-bottom: 20px;
+        color: white;
+
+        @include breakpoint(tablet) {
+          font-size: 47px;
+        }
+
+        @include breakpoint(mobile-lg) {
+          font-size: 30px;
+          width: 100%;
+        }
+
+        @include breakpoint(mobile) {
+          font-size: 25px;
+        }
+
+        @include breakpoint(mobile-xxs) {
+          font-size: 20px;
+        }
+      }
+
+      p {
+        font-size: 16px;
+        color: white;
+        text-align: center;
+
+        @include breakpoint(tablet) {
+          font-size: 15px;
+          width: 65%;
+        }
+
+        @include breakpoint(mobile-lg) {
+          width: 100%;
+        }
+
+        @include breakpoint(mobile) {
+          font-size: 14px;
+          width: 95%;
+        }
+      }
+    }
+
+    .lower-div {
+      //   border: 2px solid purple;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 90%;
+
+      @include breakpoint(laptop) {
+        width: 100%;
+      }
+
+      @include breakpoint(mobile-lg) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  }
+}

@@ -1,0 +1,134 @@
+@import "../../globalStyling/mixin";
+@import "../../globalStyling/variables";
+
+.navbar {
+  // border: 2px solid red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 14px 0px;
+  background-color: #f2f2f6;
+  width: 100%;
+  border-radius: 50px;
+
+  .for-center-navbar {
+    // border: 2px solid blue;
+    max-width: 1600px;
+    width: 95%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include breakpoint(mobile-lg){
+      width: 90%;
+    }
+
+    .img-one {
+      width: 4%;
+
+      @include breakpoint(tablet-lg) {
+        width: 5%;
+      }
+
+      @include breakpoint(tablet) {
+        width: 6%;
+      }
+
+      @include breakpoint(tablet-sm) {
+        width: 7%;
+      }
+
+      @include breakpoint(mobile-lg){
+        width: 12%;
+      }
+
+      @include breakpoint(mobile){
+        width: 10%;
+      }
+
+      @include breakpoint(mobile-sm){
+        width: 11%;
+      }
+
+      @include breakpoint(mobile-xxs){
+        width: 12%;
+      }
+    }
+
+    .nav-links {
+      // border: 2px solid red;
+      display: flex;
+      justify-content: space-between;
+      width: 45%;
+
+      @include breakpoint(laptop) {
+        width: 55%;
+      }
+
+      @include breakpoint(tablet-lg) {
+        display: none;
+      }
+
+      a {
+        font-size: 16px;
+        color: #7d7c7f;
+      }
+    }
+
+    .get-started-button {
+      // border: 2px solid green;
+      width: 13%;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+
+      @include breakpoint(tablet-lg) {
+        display: none;
+      }
+    }
+
+    .one-burger-effect {
+      // border: 2px solid red;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      display: none;
+
+      @include breakpoint(tablet-lg){
+        display: block;
+      }
+
+      // @include breakpoint(tablet){
+      //   display: block;
+      // }
+     
+
+      li {
+        list-style-type: none;
+
+        i {
+          font-size: 28px;
+          font-weight: 600;
+           display: none;
+
+           @include breakpoint(tablet-lg){
+            display: block;
+           }
+
+          @include breakpoint(tablet-sm){
+            font-size: 30px;
+            display: block;
+          }
+
+          @include breakpoint(mobile-lg){
+            font-size: 30px;
+          }
+
+          @include breakpoint(mobile){
+            font-size: 25px;
+          }
+        }
+      }
+    }
+  }
+}

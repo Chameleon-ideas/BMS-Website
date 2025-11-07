@@ -1,0 +1,35 @@
+@import "../../globalStyling/mixin";
+@import "../../globalStyling/variables";
+
+.video-area {
+  // border: 2px solid red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  // padding: 15px 0px;
+
+  .video-iframe {
+    // border: 2px solid blue;
+    // padding: 64px 0px;
+    width: 1910px;
+    height: 700px;
+
+    @include breakpoint(tablet-lg){
+height: 400px;
+    }
+
+  @include breakpoint(mobile-lg){
+    height: 250px;
+  }
+
+  @include breakpoint(mobile){
+    height: 225px;
+  }
+
+
+
+    @include breakpoint(mobile-xxs){
+      height: 200px;
+    }
+  }
+}

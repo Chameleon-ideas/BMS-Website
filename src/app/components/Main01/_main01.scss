@@ -1,0 +1,597 @@
+@import "../../globalStyling/mixin";
+@import "../../globalStyling/variables";
+
+.main01 {
+  //   border: 2px solid red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 80px 0px;
+  background-color: #f4f5f8;
+
+  .for-center-main01 {
+    // border: 2px solid blue;
+    max-width: 1600px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .div-part-one {
+      // border: 2px solid green;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      h2 {
+        font-size: 50px;
+        text-align: center;
+        width: 50%;
+        line-height: 1.1;
+        padding-bottom: 20px;
+
+        @include breakpoint(tablet-lg) {
+          width: 75%;
+        }
+
+        @include breakpoint(tablet) {
+          width: 85%;
+        }
+
+        @include breakpoint(mobile-lg) {
+          font-size: 45px;
+          width: 90%;
+        }
+
+        @include breakpoint(mobile-sm){
+          font-size: 40px;
+        }
+      }
+
+      p {
+        font-size: 16px;
+        text-align: center;
+        color: #5f5f60;
+        width: 55%;
+        padding-top: 5px;
+
+        @include breakpoint(tablet-lg) {
+          width: 65%;
+        }
+
+        @include breakpoint(tablet) {
+          width: 75%;
+        }
+      }
+    }
+
+    .div-part-two {
+      // border: 2px solid red;
+      display: flex;
+      width: 90%;
+      justify-content: space-between;
+      align-items: center;
+      padding: 55px;
+      background-image: url("/pics/green-circle.png");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      border-radius: 15px;
+      margin-top: 65px;
+
+      @include breakpoint(tablet-lg) {
+        width: 95%;
+      }
+
+      @include breakpoint(tablet) {
+        margin-top: 45px;
+        padding: 35px;
+        gap: 20px;
+      }
+
+      @include breakpoint(mobile-lg) {
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+      }
+
+      .para-button-div {
+        // border: 2px solid green;
+        display: flex;
+        flex-direction: column;
+        width: 40%;
+        line-height: 1.3;
+
+        @include breakpoint(mobile-lg) {
+          width: 100%;
+          margin-bottom: 20px;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+        }
+
+       
+
+        p {
+          font-size: 24px;
+          color: white;
+          padding-bottom: 20px;
+
+          @include breakpoint(tablet) {
+            font-size: 19px;
+            padding-bottom: 23px;
+          }
+
+          @include breakpoint(mobile-lg) {
+            font-size: 20px;
+            padding-bottom: 12px;
+            text-align: center;
+          }
+        }
+
+        .get-started-button {
+          //   border: 2px solid red;
+          padding-top: 35px;
+
+          @include breakpoint(tablet) {
+            padding-top: 40px;
+          }
+
+          @include breakpoint(mobile-lg){
+            padding-top: 25px;
+          }
+        }
+      }
+
+      .parent-div {
+        // border: 2px solid red;
+        display: flex;
+        flex-direction: column;
+
+        .child-one {
+          //   border: 2px solid blue;
+          display: flex;
+          gap: 16px;
+          //   justify-content: space-between;
+          align-items: center;
+          margin-bottom: 15px;
+          //   width: 95%;
+
+          .cicle-icon {
+            border: 1px solid rgba(255, 255, 255, 0.25);
+            padding: 4px 7px;
+            border-radius: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            /* 👇 This is where the glass effect happens */
+            background: rgba(255, 255, 255, 0.15); /* Slightly transparent */
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px); /* For Safari support */
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Soft shadow for depth */
+
+            i {
+              color: white;
+              font-size: 12px;
+            }
+          }
+
+          p {
+            color: white;
+          }
+        }
+
+        .child-two {
+          //   border: 2px solid blue;
+          display: flex;
+          gap: 16px;
+          //   justify-content: space-between;
+          align-items: center;
+          margin-bottom: 15px;
+          //   width: 95%;
+
+          .cicle-icon {
+            border: 1px solid rgba(255, 255, 255, 0.25);
+            padding: 4px 7px;
+            border-radius: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            /* 👇 This is where the glass effect happens */
+            background: rgba(255, 255, 255, 0.15); /* Slightly transparent */
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px); /* For Safari support */
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Soft shadow for depth */
+
+            i {
+              color: white;
+              font-size: 12px;
+            }
+          }
+
+          p {
+            color: white;
+          }
+        }
+
+        .child-three {
+          //   border: 2px solid blue;
+          display: flex;
+          gap: 16px;
+          //   justify-content: space-between;
+          align-items: center;
+          margin-bottom: 15px;
+          //   width: 95%;
+
+          .cicle-icon {
+            border: 1px solid rgba(255, 255, 255, 0.25);
+            padding: 4px 7px;
+            border-radius: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            /* 👇 This is where the glass effect happens */
+            background: rgba(255, 255, 255, 0.15); /* Slightly transparent */
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px); /* For Safari support */
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Soft shadow for depth */
+
+            i {
+              color: white;
+              font-size: 12px;
+            }
+          }
+
+          p {
+            color: white;
+          }
+        }
+
+        .child-four {
+          //   border: 2px solid blue;
+          display: flex;
+          gap: 16px;
+          //   justify-content: space-between;
+          align-items: center;
+          margin-bottom: 15px;
+          //   width: 95%;
+
+          .cicle-icon {
+            border: 1px solid rgba(255, 255, 255, 0.25);
+            padding: 4px 7px;
+            border-radius: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            /* 👇 This is where the glass effect happens */
+            background: rgba(255, 255, 255, 0.15); /* Slightly transparent */
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px); /* For Safari support */
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Soft shadow for depth */
+
+            i {
+              color: white;
+              font-size: 12px;
+            }
+          }
+
+          p {
+            color: white;
+          }
+        }
+      }
+    }
+
+    .handling-two-big-divs {
+      // border: 2px solid green;
+      display: flex;
+      justify-content: space-between;
+      width: 90%;
+      padding-top: 35px;
+
+      @include breakpoint(tablet-lg) {
+        width: 95%;
+      }
+
+      @include breakpoint(tablet) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      @include breakpoint(mobile-lg){
+        width: 90%;
+      }
+
+      .div-part-three {
+        // border: 2px solid red;
+        width: 48%;
+
+        @include breakpoint(tablet-lg) {
+          width: 47%;
+        }
+
+        @include breakpoint(tablet) {
+          width: 100%;
+        }
+
+        .upper-part-one {
+          // border: 2px solid blue;
+          display: flex;
+          justify-content: space-between;
+          background-color: black;
+          padding: 25px;
+          border-radius: 15px;
+          //   margin-top: 25px;
+
+          .div-left-side {
+            //   border: 2px solid green;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            .circle-picture-component {
+              display: flex;
+              margin-bottom: 15px;
+
+              @include breakpoint(mobile-lg){
+                width: 80%;
+                // height: 15%;
+              }
+            }
+
+            h4 {
+              font-size: 18px;
+              width: 60%;
+              line-height: 1.2;
+              color: white;
+            }
+          }
+
+          .div-right-side {
+            // border: 2px solid purple;
+            @include breakpoint(tablet-lg) {
+              width: 35%;
+            }
+
+            @include breakpoint(tablet) {
+              width: 20%;
+            }
+
+            @include breakpoint(mobile-lg){
+              width: 25%;
+            }
+          }
+        }
+
+        .lower-part-one {
+          // border: 2px solid red;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          background-color: white;
+          padding: 25px 0px;
+          border-bottom-left-radius: 15px;
+          border-bottom-right-radius: 15px;
+
+          h2 {
+            font-size: 30px;
+            padding-bottom: 10px;
+            text-align: center;
+
+            @include breakpoint(tablet-lg) {
+              font-size: 25px;
+            }
+
+            @include breakpoint(tablet) {
+              font-size: 30px;
+            }
+
+            @include breakpoint(mobile-lg){
+              font-size: 25px;
+            }
+
+            @include breakpoint(mobile){
+              font-size: 22px;
+            }
+
+            @include breakpoint(mobile-xs){
+              font-size: 19px;
+            }
+          }
+
+          p {
+            font-size: 16px;
+            width: 55%;
+            text-align: center;
+
+            @include breakpoint(tablet-lg) {
+              width: 80%;
+            }
+
+            @include breakpoint(tablet) {
+              width: 65%;
+            }
+
+            @include breakpoint(mobile-lg){
+              width: 85%;
+            }
+
+            @include breakpoint(mobile){
+              font-size: 15px;
+
+            }
+
+            @include breakpoint(mobile-xs){
+              width: 90%;
+              font-size: 13px;
+            }
+          }
+        }
+      }
+
+      .div-part-four {
+        // border: 2px solid red;
+        width: 48%;
+
+        @include breakpoint(tablet-lg) {
+          width: 49%;
+        }
+
+        @include breakpoint(tablet) {
+          margin-top: 35px;
+          width: 100%;
+        }
+
+        .upper-part-three {
+          // border: 2px solid blue;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          // align-items: center;
+          background-color: black;
+          border-radius: 15px;
+
+          .headings-three-five {
+            //   border: 2px solid red;
+            display: flex;
+            flex-direction: column;
+            padding: 25px;
+
+            @include breakpoint(tablet-lg) {
+              padding: 32px;
+            }
+
+            @include breakpoint(mobile-lg){
+              padding: 20px;
+            }
+
+            h3 {
+              font-size: 25px;
+              font-weight: 400;
+              color: white;
+            }
+
+            h5 {
+              // font-size: 20px;
+              color: #d0d0d5;
+            }
+          }
+
+          .two-small-divs {
+            //   border: 2px solid green;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 25px;
+
+            .icon-h4-tag-one {
+              // border: 2px solid red;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+
+              i {
+                font-size: 20px;
+                padding-right: 10px;
+                color: white;
+              }
+
+              h4 {
+                font-size: 15px;
+                color: white;
+              }
+            }
+
+            .icon-h4-tag-two {
+              // border: 2px solid purple;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+
+              i {
+                font-size: 20px;
+                padding-right: 10px;
+                color: white;
+              }
+
+              h4 {
+                font-size: 15px;
+                color: white;
+              }
+            }
+          }
+        }
+
+        .lower-part-four {
+          // border: 2px solid blue;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          background-color: white;
+          padding: 25px 0px;
+          border-bottom-left-radius: 15px;
+          border-bottom-right-radius: 15px;
+
+          h2 {
+            font-size: 30px;
+            padding-bottom: 10px;
+            text-align: center;
+
+            @include breakpoint(tablet-lg) {
+              font-size: 25px;
+            }
+
+            @include breakpoint(tablet) {
+              font-size: 30px;
+            }
+
+            @include breakpoint(mobile-lg){
+              font-size: 25px;
+            }
+
+            @include breakpoint(mobile){
+              font-size: 22px;
+            }
+
+            @include breakpoint(mobile-xs){
+              font-size: 19px;
+            }
+          }
+
+          p {
+            font-size: 16px;
+            width: 55%;
+            text-align: center;
+
+            @include breakpoint(tablet-lg) {
+              width: 80%;
+            }
+
+            @include breakpoint(tablet) {
+              width: 70%;
+            }
+
+            @include breakpoint(mobile-lg){
+              width: 95%;
+            }
+
+            @include breakpoint(mobile){
+              font-size: 15px;
+              width: 90%;
+            }
+
+            @include breakpoint(mobile-xs){
+              font-size: 13px;
+
+            }
+          }
+        }
+      }
+    }
+  }
+}

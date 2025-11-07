@@ -1,0 +1,109 @@
+@import "../../globalStyling/mixin";
+@import "../../globalStyling/variables";
+
+.small-box {
+  //   border: 2px solid red;
+  padding: 35px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 30%;
+  border-radius: 20px;
+  color: #fff;
+  position: relative;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(25px);
+  -webkit-backdrop-filter: blur(25px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  @include breakpoint(laptop) {
+    width: 32%;
+  }
+
+  @include breakpoint(tablet-lg) {
+    padding: 10px;
+  }
+
+  @include breakpoint(mobile-lg) {
+    width: 100%;
+    margin-bottom: 30px;
+    padding: 25px;
+  }
+
+  @include breakpoint(mobile-sm) {
+    padding: 25px;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 20px;
+    background: linear-gradient(
+      145deg,
+      rgba(255, 255, 255, 0.2),
+      rgba(255, 255, 255, 0.05)
+    );
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  }
+
+  .round-capsule {
+    // border: 2px solid red;
+    padding: 6px 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+
+    h4 {
+      font-size: 20px;
+      color: #000;
+    }
+  }
+
+  h3 {
+    font-size: 22px;
+    text-align: center;
+    width: 90%;
+    line-height: 1.3;
+    padding-top: 20px;
+    font-weight: 600;
+
+    @include breakpoint(laptop-sm) {
+      width: 100%;
+    }
+
+    @include breakpoint(tablet-lg) {
+      font-size: 19px;
+    }
+
+    @include breakpoint(tablet) {
+      font-size: 17px;
+    }
+  }
+
+  p {
+    font-size: 16px;
+    text-align: center;
+    padding-top: 15px;
+    width: 95%;
+    opacity: 0.9;
+
+    @include breakpoint(laptop-sm) {
+      width: 100%;
+    }
+
+    @include breakpoint(tablet-lg) {
+      font-size: 14px;
+    }
+  }
+}

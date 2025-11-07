@@ -1,0 +1,50 @@
+@import "../../globalStyling/mixin";
+@import "../../globalStyling/variables";
+
+.small-button {
+  padding: 11px 24px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 30px;
+  border: 1px solid black;
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+  h2 {
+    font-size: 15px;
+    font-weight: 450;
+  }
+
+  &.black {
+    background-color: black;
+
+    h2 {
+      color: white;
+    }
+
+    &:hover {
+      background-color: white;
+
+      h2 {
+        color: black;
+      }
+    }
+  }
+
+  &.white {
+    background-color: white;
+
+    h2 {
+      color: black;
+    }
+
+    &:hover {
+      background-color: black;
+
+      h2 {
+        color: white;
+      }
+    }
+  }
+}

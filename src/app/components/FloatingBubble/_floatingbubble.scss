@@ -1,0 +1,43 @@
+@import "../../globalStyling/mixin";
+@import "../../globalStyling/variables";
+
+.floating-bubble {
+  position: absolute;
+  background: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  transition: transform 0.4s ease-out; // smoother follow
+  will-change: transform;
+  z-index: 1;
+
+  img {
+    width: 90%;
+    height: 90%;
+    object-fit: contain;
+    border-radius: 100%;
+  }
+
+  &:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.1);
+  }
+}
+
+
+  /* This creates the small pointy "tail" */
+
+//   .tail {
+//     position: absolute;
+//     // bottom: 20px;
+//     left: 50%;
+//     transform: translateX(-50%) rotate(45deg);
+//     width: 12px;
+//     height: 12px;
+//     background: white;
+//     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+//     z-index: -1;
+//   }
+

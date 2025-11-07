@@ -1,0 +1,490 @@
+@import "../../globalStyling/mixin";
+@import "../../globalStyling/variables";
+
+.header {
+  //   border: 2px solid red;
+  height: 100vh;
+  display: flex;
+  // justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+
+  .header-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; // makes video behave like background-image: cover
+    z-index: -1; // send behind content
+    filter: brightness(1.1) blur(1px);
+    // optional: darken video so text is readable
+  }
+
+  .navbar-capsule {
+    // border: 2px solid blue;
+    width: 65%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
+
+    @include breakpoint(desktop) {
+      width: 75%;
+    }
+
+    @include breakpoint(laptop-sm) {
+      width: 85%;
+    }
+
+    @include breakpoint(tablet-lg) {
+      width: 75%;
+    }
+
+    @include breakpoint(tablet) {
+      width: 80%;
+    }
+
+    @include breakpoint(mobile-lg) {
+      width: 90%;
+      padding-top: 15px;
+    }
+  }
+
+  .for-center-header {
+    // border: 2px solid green;
+    max-width: 1600px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 200px;
+
+    @include breakpoint(tablet-lg) {
+      padding-top: 160px;
+    }
+
+    @include breakpoint(mobile-lg) {
+      padding-top: 100px;
+    }
+
+    @include breakpoint(mobile) {
+      padding-top: 90px;
+    }
+
+    .middle-div {
+      //   border: 2px solid blue;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .yellow-capsule {
+        background-color: #fdf7bc;
+        padding: 8px;
+        border-radius: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 16%;
+        margin-bottom: 25px;
+
+        @include breakpoint(laptop) {
+          width: 18%;
+        }
+
+        @include breakpoint(tablet-lg) {
+          width: 21%;
+        }
+
+        @include breakpoint(tablet) {
+          width: 27%;
+        }
+
+        @include breakpoint(mobile-lg) {
+          width: 50%;
+        }
+
+        @include breakpoint(mobile-sm) {
+          width: 55%;
+        }
+
+        h4 {
+          font-size: 15px;
+          font-weight: 600;
+          text-align: center;
+
+          @include breakpoint(tablet-lg) {
+            font-size: 13px;
+          }
+        }
+      }
+
+      h1 {
+        font-size: 70px;
+        text-align: center;
+        line-height: 1.2;
+        font-weight: 620;
+        width: 75%;
+
+        @include breakpoint(laptop) {
+          font-size: 65px;
+          width: 70%;
+        }
+
+        @include breakpoint(laptop-md) {
+          font-size: 60px;
+        }
+
+        @include breakpoint(tablet-lg) {
+          font-size: 55px;
+          width: 75%;
+        }
+
+        @include breakpoint(tablet) {
+          font-size: 50px;
+        }
+
+        @include breakpoint(tablet-sm) {
+          font-size: 50px;
+          width: 90%;
+        }
+
+        @include breakpoint(mobile-lg) {
+          font-size: 45px;
+        }
+
+        @include breakpoint(mobile-sm) {
+          font-size: 40px;
+        }
+      }
+
+      p {
+        color: #7d7c7f;
+        width: 45%;
+        text-align: center;
+        padding-top: 20px;
+
+        @include breakpoint(tablet-lg) {
+          width: 55%;
+          padding-top: 25px;
+        }
+
+        @include breakpoint(tablet) {
+          width: 65%;
+        }
+
+        @include breakpoint(mobile) {
+          width: 68%;
+        }
+
+        @include breakpoint(mobile-sm) {
+          width: 60%;
+        }
+      }
+
+      .two-buttons {
+        // border: 2px solid green;
+        display: flex;
+        justify-content: space-between;
+        width: 17%;
+        align-items: center;
+        // gap: 15px;
+        padding-top: 65px;
+
+        @include breakpoint(laptop) {
+          width: 18%;
+        }
+
+        @include breakpoint(laptop-md) {
+          width: 19%;
+        }
+
+        @include breakpoint(tablet-lg) {
+          width: 25%;
+          padding-top: 60px;
+        }
+
+        @include breakpoint(tablet) {
+          width: 30%;
+        }
+
+        @include breakpoint(tablet-sm) {
+          width: 32%;
+        }
+
+        @include breakpoint(mobile-lg) {
+          width: 55%;
+        }
+
+        @include breakpoint(mobile) {
+          width: 60%;
+          padding-top: 35px;
+        }
+
+        @include breakpoint(mobile-sm) {
+          width: 62%;
+        }
+
+        @include breakpoint(mobile-xxs) {
+          width: 68%;
+          padding-top: 45px;
+        }
+      }
+    }
+  }
+
+  .image-one {
+    // border: 2px solid red;
+    position: absolute;
+    left: 500px;
+    top: 190px;
+
+    @include breakpoint(laptop-sm) {
+      left: 400px;
+    }
+
+    @include breakpoint(tablet-lg) {
+      left: 150px;
+      top: 210px;
+    }
+
+    @include breakpoint(tablet-sm) {
+      left: 120px;
+    }
+
+    @include breakpoint(mobile-lg) {
+      display: none;
+    }
+
+    @include breakpoint(mobile) {
+      display: none;
+    }
+
+    @include breakpoint(mobile-sm) {
+      display: none;
+    }
+  }
+
+  .image-two {
+    //  border: 2px solid red;
+    position: absolute;
+    left: 130px;
+    top: 420px;
+
+    @include breakpoint(laptop) {
+      left: 100px;
+    }
+
+    @include breakpoint(tablet) {
+      left: 80px;
+    }
+
+    @include breakpoint(tablet-sm) {
+      left: 50px;
+    }
+
+     @include breakpoint(mobile-lg) {
+      display: none;
+    }
+
+    @include breakpoint(mobile) {
+      display: none;
+    }
+
+    @include breakpoint(mobile-sm) {
+      display: none;
+    }
+  }
+
+  .image-three {
+    //  border: 2px solid red;
+    position: absolute;
+    left: 410px;
+    top: 500px;
+
+    @include breakpoint(desktop) {
+      left: 390px;
+    }
+
+    @include breakpoint(laptop) {
+      top: 640px;
+    }
+
+    @include breakpoint(laptop-sm) {
+      top: 680px;
+    }
+
+    @include breakpoint(tablet-lg) {
+      top: 780px;
+    }
+
+    @include breakpoint(mobile-lg) {
+      display: none;
+    }
+
+    @include breakpoint(mobile) {
+      display: none;
+    }
+
+    @include breakpoint(mobile-sm) {
+      display: none;
+    }
+  }
+
+  .image-four {
+    //  border: 2px solid red;
+    position: absolute;
+    left: 220px;
+    top: 720px;
+
+    @include breakpoint(laptop) {
+      top: 740px;
+      left: 170px;
+    }
+
+     @include breakpoint(mobile-lg) {
+      display: none;
+    }
+
+    @include breakpoint(mobile) {
+      display: none;
+    }
+
+    @include breakpoint(mobile-sm) {
+      display: none;
+    }
+
+    @include breakpoint(mobile-xxs) {
+      // left: 90px;
+      display: none;
+    }
+  }
+
+  .image-five {
+    //  border: 2px solid red;
+    position: absolute;
+    right: 510px;
+    top: 120px;
+
+    @include breakpoint(laptop) {
+      top: 140px;
+    }
+
+    @include breakpoint(laptop-sm) {
+      top: 160px;
+    }
+
+    @include breakpoint(tablet) {
+      top: 150px;
+      right: 400px;
+    }
+ @include breakpoint(mobile-lg) {
+      display: none;
+    }
+
+    @include breakpoint(mobile) {
+      display: none;
+    }
+
+    @include breakpoint(mobile-sm) {
+      display: none;
+    }
+
+    @include breakpoint(mobile-xxs) {
+      // right: 320px;
+      display: none;
+    }
+  }
+
+  .image-six {
+    //  border: 2px solid red;
+    position: absolute;
+    right: 210px;
+    top: 290px;
+
+    @include breakpoint(tablet-lg) {
+      right: 140px;
+    }
+
+    @include breakpoint(tablet-sm) {
+      right: 100px;
+    }
+
+    @include breakpoint(mobile-lg) {
+      display: none;
+    }
+
+    @include breakpoint(mobile) {
+      display: none;
+    }
+
+    @include breakpoint(mobile-sm) {
+      display: none;
+    }
+
+    @include breakpoint(mobile-xxs) {
+      display: none;
+    }
+  }
+
+  .image-seven {
+    //  border: 2px solid red;
+    position: absolute;
+    right: 200px;
+    bottom: 190px;
+
+    @include breakpoint(tablet-lg) {
+      right: 170px;
+    }
+
+    @include breakpoint(tablet-sm) {
+      right: 120px;
+      bottom: 150px;
+    }
+
+    @include breakpoint(mobile-lg) {
+      display: none;
+    }
+
+    @include breakpoint(mobile) {
+      display: none;
+    }
+
+    @include breakpoint(mobile-sm) {
+      display: none;
+    }
+  }
+
+  .image-eight {
+    //  border: 2px solid red;
+    position: absolute;
+    right: 500px;
+    bottom: 120px;
+
+    @include breakpoint(laptop-sm) {
+      right: 400px;
+    }
+
+    @include breakpoint(tablet-lg) {
+      right: 110px;
+      bottom: 70px;
+    }
+
+     @include breakpoint(mobile-lg) {
+      display: none;
+    }
+
+    @include breakpoint(mobile) {
+      display: none;
+    }
+
+    @include breakpoint(mobile-sm) {
+      display: none;
+    }
+
+    @include breakpoint(mobile-xxs) {
+      display: none;
+    }
+  }
+}
