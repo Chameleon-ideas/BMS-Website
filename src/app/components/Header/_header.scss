@@ -152,6 +152,7 @@
 
         @include breakpoint(mobile-lg) {
           font-size: 45px;
+          width: 95%;
         }
 
         @include breakpoint(mobile-sm) {
@@ -179,7 +180,13 @@
         }
 
         @include breakpoint(mobile-sm) {
-          width: 60%;
+          width: 70%;
+          font-size: 15px;
+          padding-top: 30px;
+        }
+
+        @include breakpoint(mobile-xxs){
+          width: 80%;
         }
       }
 

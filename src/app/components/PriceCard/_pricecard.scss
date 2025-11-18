@@ -1,0 +1,117 @@
+@import "../../globalStyling/mixin";
+@import "../../globalStyling/variables";
+
+.big-div-box {
+  background: white;
+  border: 1px solid #e3e3e3;
+  border-radius: 20px;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  position: relative;
+  transition: all 0.3s ease;
+  overflow: hidden;
+
+  // Gradient borders when hovered
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0; // cover entire box
+    border-radius: inherit;
+    padding: 2px; // border thickness
+    background: linear-gradient(45deg, #ff7a00, #9333ff);
+    -webkit-mask: linear-gradient(#fff 0 0) content-box,
+      linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    opacity: 0;
+    transition: opacity 0.35s ease;
+    pointer-events: none;
+  }
+
+  &:hover::after {
+    opacity: 1;
+  }
+
+  /* HEADER SECTION */
+  .div-one {
+    display: flex;
+    flex-direction: column;
+
+    h4 {
+      font-size: 25px;
+      font-weight: 500;
+    }
+
+    p {
+      font-size: 15px;
+      line-height: 1.4;
+      padding: 12px 0;
+      width: 90%;
+    }
+
+    h2 {
+      font-size: 20px;
+      font-weight: 600;
+    }
+
+    h5 {
+      font-size: 16px;
+      font-weight: 500;
+      margin-top: 5px;
+    }
+  }
+
+  /* BUTTON SECTION */
+  .div-two {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+
+  /* FEATURES SECTION */
+  .div-three {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+
+    .feature-item {
+      display: flex;
+      align-items: center;
+
+      .cicle-icon-one {
+        width: 22px;
+        height: 22px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &.black {
+          background: black;
+          border: 1px solid black;
+
+          i {
+            color: white;
+          }
+        }
+
+        &.gray {
+          background: #f0f0f0;
+          border: 1px solid #ccc;
+
+          i {
+            color: black;
+          }
+        }
+      }
+
+      p {
+        margin-left: 10px;
+        font-size: 15px;
+        color: #4a4a4a;
+      }
+    }
+  }
+}

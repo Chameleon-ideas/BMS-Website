@@ -1,22 +1,55 @@
+@import "../../globalStyling/mixin";
+@import "../../globalStyling/variables";
+
 .main03 {
-  border: 2px solid red;
+  // border: 2px solid red;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 55px 0px;
+  padding: 85px 0px;
 
   .for-center-main03 {
     // border: 2px solid blue;
     max-width: 1600px;
-    width: 100%;
+    width: 85%;
     display: flex;
     justify-content: space-between;
     align-items: center;
 
-    .left-side-div {
-    //   border: 2px solid green;
+    @include breakpoint(desktop) {
+      width: 90%;
+    }
+
+    @include breakpoint(laptop) {
+      width: 90%;
+    }
+
+    @include breakpoint(tablet) {
       display: flex;
       flex-direction: column;
+    }
+
+    .left-side-div {
+      // border: 2px solid green;
+      display: flex;
+      flex-direction: column;
+      width: 50%;
+
+      @include breakpoint(laptop) {
+        width: 45%;
+      }
+
+      @include breakpoint(tablet) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 90%;
+        margin-bottom: 45px;
+      }
+
+      @include breakpoint(mobile-lg) {
+        width: 100%;
+      }
 
       .small-yellow-capsule-two {
         padding: 10px;
@@ -27,6 +60,22 @@
         width: 13%;
         border-radius: 20px;
         margin-bottom: 20px;
+
+        @include breakpoint(laptop-md) {
+          width: 15%;
+        }
+
+        @include breakpoint(laptop-sm) {
+          width: 18%;
+        }
+
+        @include breakpoint(tablet-lg) {
+          width: 19%;
+        }
+
+        @include breakpoint(mobile) {
+          width: 25%;
+        }
 
         h4 {
           font-size: 15px;
@@ -39,36 +88,595 @@
         width: 75%;
         line-height: 1.1;
         font-weight: 450;
+
+        @include breakpoint(laptop) {
+          width: 90%;
+          font-size: 45px;
+        }
+
+        @include breakpoint(laptop-sm) {
+          // width: ;
+          font-size: 40px;
+        }
+
+        @include breakpoint(tablet-lg) {
+          font-size: 30px;
+        }
+
+        @include breakpoint(tablet) {
+          text-align: center;
+          font-size: 55px;
+          width: 100%;
+        }
+
+        @include breakpoint(tablet-sm) {
+          width: 85%;
+        }
+
+        @include breakpoint(mobile-lg) {
+          font-size: 40px;
+          width: 100%;
+        }
+
+        @include breakpoint(mobile) {
+          font-size: 35px;
+        }
       }
 
-
       .handling-three-small-divs {
-        border: 2px solid red;
+        // border: 2px solid red;
         display: flex;
         flex-direction: column;
+        padding: 35px 0px;
 
+        @include breakpoint(tablet) {
+          display: flex;
+          flex-direction: column;
+          // align-items: center;
+          width: 65%;
+          padding: 45px 0px;
+        }
 
+        @include breakpoint(tablet-sm) {
+          width: 75%;
+        }
+
+        @include breakpoint(mobile-lg) {
+          width: 90%;
+        }
+
+        @include breakpoint(mobile-sm) {
+          width: 95%;
+        }
 
         .three-circles-headings-one {
-            border: 2px solid blue;
+          // border: 2px solid blue;
+          display: flex;
+          justify-content: space-between;
+          width: 43%;
+          margin-bottom: 20px;
+
+          @include breakpoint(xl-desktop) {
+            width: 45%;
+          }
+
+          @include breakpoint(desktop) {
+            width: 46%;
+          }
+
+          @include breakpoint(laptop) {
+            width: 59%;
+          }
+
+          @include breakpoint(laptop-md) {
+            width: 62%;
+          }
+
+          @include breakpoint(laptop-sm) {
+            width: 66%;
+          }
+
+          @include breakpoint(tablet-lg) {
+            width: 84%;
+          }
+
+          @include breakpoint(tablet) {
+            width: 81%;
+            margin-bottom: 25px;
+          }
+
+          @include breakpoint(tablet-sm) {
+            width: 75%;
+          }
+
+          @include breakpoint(mobile-lg) {
+            width: 90%;
+          }
+
+          @include breakpoint(mobile-sm) {
+            width: 95%;
+          }
+
+          @include breakpoint(mobile-xxs) {
+            width: 100%;
+          }
+
+          .cicle-icon {
+            // border: 2px solid red;
+            padding: 2px 5px;
+            border-radius: 50px;
+            background-color: black;
             display: flex;
+            justify-content: center;
+            align-items: center;
 
-
-            .cicle-icon {
-                // border: 2px solid red;
-                padding: 1px 4px;
-                border-radius: 50px;
-                background-color: black;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-
-
-                i {
-                    color: white;
-                    font-size: 14px;
-                }
+            i {
+              color: white;
+              font-size: 14px;
             }
+          }
+
+          p {
+            font-size: 17px;
+
+            @include breakpoint(mobile-lg) {
+              font-size: 15px;
+            }
+          }
+        }
+
+        .three-circles-headings-two {
+          // border: 2px solid blue;
+          display: flex;
+          justify-content: space-between;
+          width: 43%;
+          margin-bottom: 20px;
+
+          @include breakpoint(xl-desktop) {
+            width: 45%;
+          }
+
+          @include breakpoint(desktop) {
+            width: 46%;
+          }
+
+          @include breakpoint(laptop) {
+            width: 59%;
+          }
+
+          @include breakpoint(laptop-md) {
+            width: 62%;
+          }
+
+          @include breakpoint(laptop-sm) {
+            width: 66%;
+          }
+
+          @include breakpoint(tablet-lg) {
+            width: 84%;
+          }
+
+          @include breakpoint(tablet) {
+            width: 81%;
+            margin-bottom: 25px;
+          }
+
+          @include breakpoint(tablet-sm) {
+            width: 75%;
+          }
+
+          @include breakpoint(mobile-lg) {
+            width: 90%;
+          }
+
+          @include breakpoint(mobile-sm) {
+            width: 95%;
+          }
+
+          @include breakpoint(mobile-xxs) {
+            width: 100%;
+          }
+
+          .cicle-icon {
+            // border: 2px solid red;
+            padding: 2px 5px;
+            border-radius: 50px;
+            background-color: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            i {
+              color: white;
+              font-size: 14px;
+            }
+          }
+
+          p {
+            font-size: 17px;
+
+            @include breakpoint(mobile-lg) {
+              font-size: 15px;
+            }
+          }
+        }
+
+        .three-circles-headings-three {
+          // border: 2px solid blue;
+          display: flex;
+          justify-content: space-between;
+          width: 27%;
+          //  margin-bottom: 20px;
+
+          @include breakpoint(xl-desktop) {
+            width: 29%;
+          }
+
+          @include breakpoint(desktop) {
+            width: 29%;
+          }
+
+          @include breakpoint(laptop) {
+            width: 38%;
+          }
+
+          @include breakpoint(laptop-md) {
+            width: 39.4%;
+          }
+
+          @include breakpoint(laptop-sm) {
+            width: 42%;
+          }
+
+          @include breakpoint(tablet-lg) {
+            width: 53.4%;
+          }
+
+          @include breakpoint(tablet) {
+            display: flex;
+            // justify-content: flex-start;
+            width: 52%;
+          }
+
+          @include breakpoint(tablet-sm) {
+            width: 48%;
+          }
+
+          @include breakpoint(mobile-lg) {
+            width: 59%;
+          }
+
+          @include breakpoint(mobile-sm) {
+            width: 62%;
+          }
+
+          @include breakpoint(mobile-xxs) {
+            width: 64%;
+          }
+
+          .cicle-icon {
+            // border: 2px solid red;
+            padding: 2px 5px;
+            border-radius: 50px;
+            background-color: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            i {
+              color: white;
+              font-size: 14px;
+            }
+          }
+
+          p {
+            font-size: 17px;
+
+            @include breakpoint(mobile-lg) {
+              font-size: 15px;
+            }
+          }
+        }
+      }
+
+      .handling-component-button {
+        // border: 2px solid red;
+        margin-top: 20px;
+      }
+    }
+
+    .right-side-div {
+      // border: 2px solid red;
+      display: flex;
+      flex-direction: column;
+      background-color: #f5f2f2;
+      padding: 30px;
+      width: 45%;
+      border-radius: 25px;
+
+      @include breakpoint(laptop) {
+        width: 48%;
+      }
+
+      @include breakpoint(laptop-md) {
+        width: 50%;
+      }
+
+      @include breakpoint(tablet-lg) {
+        padding: 20px;
+        width: 55%;
+      }
+
+      @include breakpoint(tablet) {
+        width: 90%;
+        padding: 25px;
+      }
+
+      @include breakpoint(mobile-lg) {
+        width: 100%;
+        display: flex;
+        align-items: center;
+      }
+
+      @include breakpoint(mobile-xs){
+        padding: 25px;
+      }
+
+      .upper-div {
+        // border: 2px solid green;
+        display: flex;
+        justify-content: space-between;
+
+        @include breakpoint(mobile-lg) {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+        }
+
+        .left-side {
+          // border: 2px solid red;
+          display: flex;
+          flex-direction: column;
+          background-color: white;
+          border-radius: 20px;
+          justify-content: center;
+          padding: 15px;
+          width: 55%;
+
+          @include breakpoint(desktop) {
+            padding: 20px;
+          }
+
+          @include breakpoint(tablet-lg) {
+            padding: 15px;
+          }
+
+          @include breakpoint(mobile-lg) {
+            width: 100%;
+          }
+
+          @include breakpoint(mobile-xs) {
+            width: 100%;
+            padding: 25px;
+          }
+
+          h3 {
+            font-size: 30px;
+            padding-bottom: 15px;
+
+            @include breakpoint(tablet-lg) {
+              font-size: 23px;
+              // padding: 17px;
+            }
+          }
+
+          .heading-paragraphs-tags {
+            // border: 2px solid blue;
+            display: flex;
+            flex-direction: column;
+
+            h4 {
+              font-size: 23px;
+
+              @include breakpoint(tablet-lg) {
+                font-size: 20px;
+              }
+            }
+          }
+
+          .straight-line {
+            width: 320px;
+            // height: 100%;
+            background-color: rgb(225, 223, 223);
+            padding: 1px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 25px 0px;
+
+            @include breakpoint(desktop) {
+              width: 280px;
+            }
+
+            @include breakpoint(laptop) {
+              width: 230px;
+            }
+
+            @include breakpoint(laptop-md) {
+              width: 250px;
+            }
+
+            @include breakpoint(tablet-lg) {
+              width: 200px;
+            }
+
+            @include breakpoint(tablet-sm) {
+              width: 275px;
+            }
+
+            @include breakpoint(mobile-xs) {
+              width: 170px;
+              // display: none;
+            }
+          }
+
+          .heading-icon-tag {
+            display: flex;
+            width: 95%;
+            // border: 2px solid red;
+            justify-content: space-between;
+            align-items: center;
+
+            h5 {
+              font-size: 15px;
+            }
+
+            i {
+              font-size: 23px;
+            }
+          }
+        }
+
+        .right-side {
+          // border: 2px solid red;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          padding: 15px;
+          background-color: white;
+          border-radius: 20px;
+          width: 40%;
+
+          @include breakpoint(mobile-lg) {
+            width: 100%;
+            margin-top: 25px;
+          }
+
+          h3 {
+            font-size: 20px;
+
+            @include breakpoint(desktop) {
+              font-size: 21px;
+            }
+
+            @include breakpoint(tablet-lg) {
+              text-align: center;
+              font-size: 18px;
+            }
+
+            @include breakpoint(mobile-lg) {
+              font-size: 20px;
+            }
+          }
+
+          .handling-image {
+            // border: 2px solid blue;
+            margin-top: 25px;
+
+            @include breakpoint(desktop) {
+              margin-top: 27px;
+            }
+
+            // @include breakpoint(tablet-lg){
+            //   // width: 55%;
+            // }
+          }
+        }
+      }
+
+      .lower-div {
+        // border: 2px solid red;
+        display: flex;
+        padding: 18px;
+        background-color: black;
+        border-radius: 20px;
+        width: 60%;
+        justify-content: space-between;
+        margin-top: 24px;
+
+        @include breakpoint(desktop) {
+          padding: 16px;
+        }
+
+        @include breakpoint(laptop-sm) {
+          width: 63%;
+        }
+
+        @include breakpoint(tablet-lg) {
+          width: 70%;
+        }
+
+        @include breakpoint(tablet) {
+          width: 55%;
+        }
+
+        @include breakpoint(tablet-sm) {
+          width: 57%;
+        }
+
+        @include breakpoint(mobile-lg) {
+          width: 85%;
+        }
+
+        @include breakpoint(mobile) {
+          width: 95%;
+        }
+
+        .people-identites {
+          // border: 2px solid green;
+          display: flex;
+          width: 45%;
+          // justify-content: center;
+          align-items: center;
+
+          @include breakpoint(laptop-md) {
+            width: 46%;
+          }
+        }
+
+        .h4-p-tags {
+          // border: 2px solid blue;
+          display: flex;
+          flex-direction: column;
+
+          h4 {
+            font-size: 30px;
+            color: white;
+
+            @include breakpoint(desktop) {
+              font-size: 28px;
+            }
+
+            @include breakpoint(laptop-md) {
+              font-size: 26px;
+            }
+
+            @include breakpoint(laptop-sm) {
+              font-size: 24px;
+            }
+
+            @include breakpoint(mobile-lg) {
+              font-size: 20px;
+            }
+
+            @include breakpoint(mobile-xs) {
+              font-size: 16px;
+            }
+          }
+
+          p {
+            font-size: 19px;
+            color: white;
+
+            @include breakpoint(laptop-md) {
+              font-size: 15px;
+            }
+
+            @include breakpoint(mobile-xs) {
+              font-size: 14px;
+            }
+          }
         }
       }
     }

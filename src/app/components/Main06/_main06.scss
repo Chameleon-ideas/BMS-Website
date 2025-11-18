@@ -1,0 +1,167 @@
+@import "../../globalStyling/mixin";
+@import "../../globalStyling/variables";
+
+.main06 {
+  // border: 2px solid green;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 90px 0px;
+
+  @include breakpoint(mobile-lg){
+    padding: 80px 0px;
+  }
+
+  .for-center-main06 {
+    // border: 2px solid red;
+    max-width: 1600px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .small-yellow-capsule-four {
+      padding: 10px;
+      background-color: #fdf7bc;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 20px;
+
+      h4 {
+        font-size: 15px;
+        font-weight: 600;
+      }
+    }
+
+    h6 {
+      font-size: 50px;
+      text-align: center;
+      width: 40%;
+      line-height: 1.2;
+      padding-top: 23px;
+
+      @include breakpoint(laptop) {
+        width: 45%;
+      }
+
+      @include breakpoint(tablet-lg) {
+        font-size: 45px;
+        width: 60%;
+      }
+
+      @include breakpoint(tablet) {
+        width: 70%;
+      }
+
+      @include breakpoint(mobile-lg){
+        font-size: 35px;
+        width: 85%;
+      }
+
+      @include breakpoint(mobile-sm){
+        font-size: 30px;
+      }
+    }
+
+    .handling-price-card {
+      // border: 2px solid green;
+      display: flex;
+      // flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      width: 90%;
+      margin-top: 85px;
+
+      @include breakpoint(laptop) {
+        width: 85%;
+      }
+
+      @include breakpoint(laptop-md) {
+        width: 90%;
+      }
+
+      @include breakpoint(tablet-lg) {
+        width: 95%;
+      }
+
+      @include breakpoint(tablet) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      @include breakpoint(mobile-lg){
+        margin-top: 65px;
+      }
+
+      .price-card-one {
+        // border: 2px solid red;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        @include breakpoint(desktop) {
+          width: 27%;
+        }
+
+        @include breakpoint(tablet-lg) {
+          width: 30%;
+        }
+
+        @include breakpoint(tablet) {
+          width: 50%;
+        }
+
+        @include breakpoint(mobile-lg){
+          width: 85%;
+        }
+      }
+
+      .price-card-two {
+        // border: 2px solid red;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 30%;
+
+        @include breakpoint(tablet-lg) {
+          width: 33%;
+        }
+
+        @include breakpoint(tablet) {
+          width: 50%;
+          margin-top: 30px;
+        }
+
+         @include breakpoint(mobile-lg){
+          width: 85%;
+        }
+      }
+
+      .price-card-three {
+        // border: 2px solid red;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        @include breakpoint(desktop) {
+          width: 27%;
+        }
+
+        @include breakpoint(tablet-lg) {
+          width: 30%;
+        }
+
+        @include breakpoint(tablet) {
+          width: 50%;
+          margin-top: 30px;
+        }
+
+         @include breakpoint(mobile-lg){
+          width: 85%;
+        }
+      }
+    }
+  }
+}

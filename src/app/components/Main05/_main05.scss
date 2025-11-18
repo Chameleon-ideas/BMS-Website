@@ -1,0 +1,122 @@
+@import "../../globalStyling/mixin";
+@import "../../globalStyling/variables";
+
+.main05 {
+  //   border: 2px solid red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 0px;
+
+  .for-center-main05 {
+    // border: 2px solid blue;
+    max-width: 1600px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .upper-div-section {
+      //   border: 2px solid green;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .small-yellow-capsule-three {
+        padding: 10px;
+        background-color: #fdf7bc;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 20px;
+
+        h4 {
+          font-size: 15px;
+          font-weight: 600;
+        }
+      }
+
+      h3 {
+        font-size: 53px;
+        text-align: center;
+        padding-bottom: 10px;
+
+        @include breakpoint(mobile-lg) {
+          font-size: 35px;
+          padding-top: 10px;
+        }
+
+        @include breakpoint(mobile-xs){
+          font-size: 30px;
+
+        }
+
+       
+      }
+
+      p {
+        font-size: 16px;
+        text-align: center;
+        width: 60%;
+        line-height: 1.4;
+
+        @include breakpoint(mobile-lg) {
+          font-size: 15px;
+          width: 75%;
+        }
+
+        @include breakpoint(mobile) {
+          width: 85%;
+        }
+
+         @include breakpoint(mobile-xxs){
+          font-size: 14px;
+        }
+      }
+    }
+
+    .lower-div-section {
+      // border: 2px solid red;
+      width: 85%;
+      overflow: hidden;
+      margin-top: 85px;
+
+      @include breakpoint(mobile-xs){
+        margin-top: 60px;
+      }
+
+      .scroll-container {
+        // border: 2px solid green;
+        width: 100%;
+        overflow: hidden;
+        position: relative;
+
+        .scroll-track {
+          // border: 2px solid blue;
+          display: flex;
+          gap: 20px;
+          width: max-content; // ensures full width
+          animation: scroll 35s linear infinite;
+
+          /* No waiting: move the entire width */
+        }
+      }
+    }
+
+    @keyframes scroll {
+      0% {
+        transform: translateX(0);
+      }
+      100% {
+        transform: translateX(
+          -50%
+        ); // move by half track width if you duplicate
+      }
+    }
+
+    .handling-button {
+      // border: 2px solid red;
+      margin-top: 75px;
+    }
+  }
+}

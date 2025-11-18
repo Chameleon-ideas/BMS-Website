@@ -1,0 +1,55 @@
+.testimonial-card {
+  // border: 2px solid red;
+  background: #111;
+  border-radius: 22px;
+  padding: 22px;
+  width: 100%;               /* FIX: full slide width */
+  max-width: 360px;          /* limit max size */
+  color: white;
+  position: relative;
+  overflow: hidden;
+  height: auto;              /* avoid card height jump */
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -40px;
+    left: -40px;
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    background: radial-gradient(circle, #ffe56d, #ff83e1, transparent 70%);
+    filter: blur(28px);
+    opacity: 0.6;
+  }
+
+  .card-inner {
+    position: relative;
+    z-index: 10;
+  }
+
+  .card-avatar img {
+    border-radius: 9999px;
+    width: 58px;
+    height: 58px;
+    object-fit: cover;
+    margin-bottom: 16px;
+  }
+
+  .card-text {
+    font-size: 15px;
+    line-height: 1.45;
+    margin-bottom: 16px;
+  }
+
+  .card-user {
+    h3 {
+      font-size: 16px;
+      font-weight: 600;
+    }
+    h5 {
+      font-size: 13px;
+      opacity: 0.7;
+    }
+  }
+}

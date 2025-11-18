@@ -2,7 +2,7 @@
 @import "../../globalStyling/variables";
 
 .small-box {
-  //   border: 2px solid red;
+    // border: 2px solid red;
   padding: 35px;
   display: flex;
   flex-direction: column;
@@ -89,6 +89,8 @@
     @include breakpoint(tablet) {
       font-size: 17px;
     }
+
+    
   }
 
   p {

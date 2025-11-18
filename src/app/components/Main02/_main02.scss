@@ -33,8 +33,13 @@
 
     @include breakpoint(mobile-lg) {
       width: 90%;
+      border-radius: 20px;
     }
 
+
+    @include breakpoint(mobile-xs){
+      padding: 30px;
+    }
     .upper-div {
       // border: 2px solid green;
       display: flex;
@@ -60,6 +65,10 @@
 
       @include breakpoint(mobile) {
         margin-bottom: 75px;
+      }
+
+      @include breakpoint(mobile-xs){
+        margin-bottom: 45px;
       }
 
       @include breakpoint(mobile-xxs) {

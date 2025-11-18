@@ -39,7 +39,7 @@
         }
 
         @include breakpoint(mobile-lg) {
-          font-size: 45px;
+          font-size: 40px;
           width: 90%;
         }
 
@@ -61,6 +61,11 @@
 
         @include breakpoint(tablet) {
           width: 75%;
+        }
+
+        @include breakpoint(mobile-lg){
+          font-size: 15px;
+          width: 79%;
         }
       }
     }

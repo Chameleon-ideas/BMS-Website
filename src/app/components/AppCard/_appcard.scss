@@ -1,0 +1,124 @@
+@import "../../globalStyling/mixin";
+@import "../../globalStyling/variables";
+
+.small-box-two {
+  // border: 2px solid blue;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(25px);
+  -webkit-backdrop-filter: blur(25px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 65%;
+
+  @include breakpoint(laptop-md) {
+    width: 70%;
+  }
+
+  @include breakpoint(tablet-lg) {
+    width: 90%;
+  }
+
+  @include breakpoint(tablet) {
+    width: 100%;
+  }
+
+  @include breakpoint(mobile-lg) {
+    padding: 15px;
+  }
+  .left-side-div-one {
+    // border: 2px solid green;
+    display: flex;
+
+    .pic-one {
+      width: 20%;
+
+      @include breakpoint(mobile-lg) {
+        width: 20%;
+      }
+
+      @include breakpoint(mobile-xxs) {
+        width: 22%;
+      }
+    }
+
+    .heading-tags {
+      // border: 2px solid limegreen;
+      margin-left: 15px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      h2 {
+        font-size: 21px;
+        font-size: 500;
+        color: white;
+
+        @include breakpoint(mobile-lg) {
+          font-size: 18px;
+        }
+
+        @include breakpoint(mobile) {
+          font-size: 16px;
+        }
+
+        @include breakpoint(mobile-xxs) {
+          font-size: 14px;
+        }
+      }
+
+      h5 {
+        font-size: 16px;
+        color: white;
+
+        @include breakpoint(mobile-lg) {
+          font-size: 15px;
+        }
+
+        @include breakpoint(mobile) {
+          font-size: 13px;
+        }
+
+        @include breakpoint(mobile-xxs) {
+          font-size: 12px;
+        }
+      }
+    }
+  }
+
+  .right-side-div-one {
+    // border: 2px solid blue;
+    padding: 5px 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 9999px;
+    background-color: #c6f56f;
+
+    @include breakpoint(mobile-lg) {
+      padding: 4px 9px;
+    }
+
+    @include breakpoint(mobile-xxs) {
+      padding: 3px 8px;
+    }
+
+    i {
+      font-size: 25px;
+      font-weight: 400;
+
+      @include breakpoint(mobile-lg) {
+        font-size: 20px;
+      }
+
+      @include breakpoint(mobile-xxs) {
+        font-size: 17px;
+      }
+    }
+  }
+}
