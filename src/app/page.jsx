@@ -1,3 +1,4 @@
+// import Navbar from "./components/Navbar/Navbar";
 import Header from "./components/Header/Header";
 import VideoSection from "./components/VideoSection/VideoSection";
 import Main01 from "./components/Main01/Main01";
@@ -11,6 +12,7 @@ import Footer from "./components/Footer/Footer";
 export default function Home() {
   return (
     <>
+    {/* <Navbar/> */}
       <Header />
       <VideoSection />
       <Main01 />

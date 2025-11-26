@@ -1,5 +1,5 @@
 "use client";
-
+import { motion } from "framer-motion";
 import React from "react";
 import "./_main03.scss";
 import GetStartedButton from "../GetStartedButton/GetStartedButton";
@@ -30,43 +30,93 @@ const Main03 = () => {
     <main className="main03">
       <section className="for-center-main03">
         <div className="left-side-div">
-          <div className="small-yellow-capsule-two">
+          <motion.div
+            className="small-yellow-capsule-two"
+            initial={{ opacity: 0, y: 50, filter: "blur(20px)" }}
+            whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            viewport={{ once: true, amount: 0.3 }} // triggers when 30% visible
+            style={{ filter: "blur(20px)" }}
+          >
             <h4>Feature</h4>
-          </div>
+          </motion.div>
 
-          <h5>Streamline your business operations.</h5>
+          <motion.h5
+            initial={{ opacity: 0, y: 50, filter: "blur(20px)" }}
+            whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            viewport={{ once: true, amount: 0.3 }} // triggers when 30% visible
+            style={{ filter: "blur(20px)" }}
+          >
+            Streamline your business operations.
+          </motion.h5>
 
           <div className="handling-three-small-divs">
-            <div className="three-circles-headings-one">
+            <motion.div
+              className="three-circles-headings-one"
+              initial={{ opacity: 0, y: 50, filter: "blur(20px)" }}
+              whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+              transition={{ duration: 0.5, ease: "easeOut" }}
+              viewport={{ once: true, amount: 0.3 }} // triggers when 30% visible
+              style={{ filter: "blur(20px)" }}
+            >
               <div className="cicle-icon">
                 <i className="ri-check-line"></i>
               </div>
               <p>Add a feature section about the product.</p>
-            </div>
+            </motion.div>
 
-            <div className="three-circles-headings-two">
+            <motion.div
+              className="three-circles-headings-two"
+              initial={{ opacity: 0, y: 50, filter: "blur(20px)" }}
+              whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+              transition={{ duration: 0.6, ease: "easeOut" }}
+              viewport={{ once: true, amount: 0.3 }} // triggers when 30% visible
+              style={{ filter: "blur(20px)" }}
+            >
               <div className="cicle-icon">
                 <i className="ri-check-line"></i>
               </div>
               <p>Add a feature section about the product.</p>
-            </div>
+            </motion.div>
 
-            <div className="three-circles-headings-three">
+            <motion.div
+              className="three-circles-headings-three"
+              initial={{ opacity: 0, y: 50, filter: "blur(20px)" }}
+              whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+              transition={{ duration: 0.7, ease: "easeOut" }}
+              viewport={{ once: true, amount: 0.3 }} // triggers when 30% visible
+              style={{ filter: "blur(20px)" }}
+            >
               <div className="cicle-icon">
                 <i className="ri-check-line"></i>
               </div>
               <p>Single upfront payment.</p>
-            </div>
+            </motion.div>
           </div>
 
-          <div className="handling-component-button">
+          <motion.div
+            className="handling-component-button"
+            initial={{ opacity: 0, y: 50, filter: "blur(20px)" }}
+            whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            viewport={{ once: true, amount: 0.3 }} // triggers when 30% visible
+            style={{ filter: "blur(20px)" }}
+          >
             <GetStartedButton text="Get started" />
-          </div>
+          </motion.div>
         </div>
 
         <div className="right-side-div">
           <div className="upper-div">
-            <div className="left-side">
+            <motion.div
+              className="left-side"
+              initial={{ opacity: 0, y: -50, filter: "blur(20px)" }}
+              whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+              transition={{ duration: 0.8, ease: "easeOut" }}
+              viewport={{ once: true, amount: 0.3 }} // triggers when 30% visible
+              style={{ filter: "blur(20px)" }}
+            >
               <h3>Task management</h3>
 
               <div className="heading-paragraphs-tags">
@@ -81,9 +131,16 @@ const Main03 = () => {
 
                 <i className="ri-star-s-line"></i>
               </div>
-            </div>
+            </motion.div>
 
-            <div className="right-side">
+            <motion.div
+              className="right-side"
+              initial={{ opacity: 0, y: 50, filter: "blur(20px)" }}
+              whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+              transition={{ duration: 0.8, ease: "easeOut" }}
+              viewport={{ once: true, amount: 0.3 }} // triggers when 30% visible
+              style={{ filter: "blur(20px)" }}
+            >
               <h3>Progress Tracking</h3>
 
               <div className="handling-image">
@@ -169,10 +226,17 @@ const Main03 = () => {
                   </figure>
                 </div>
               </div>
-            </div>
+            </motion.div>
           </div>
 
-          <div className="lower-div">
+          <motion.div
+            className="lower-div"
+            initial={{ opacity: 0, x: 50, filter: "blur(20px)" }}
+            whileInView={{ opacity: 1, x: 0, filter: "blur(0px)" }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            viewport={{ once: true, amount: 0.3 }} // triggers when 30% visible
+            style={{ filter: "blur(20px)" }}
+          >
             <div className="people-identites">
               <AnimatedTooltip items={identites} />
             </div>
@@ -181,7 +245,7 @@ const Main03 = () => {
               <h4>Mischievous</h4>
               <p>UI UX designer</p>
             </div>
-          </div>
+          </motion.div>
         </div>
       </section>
     </main>

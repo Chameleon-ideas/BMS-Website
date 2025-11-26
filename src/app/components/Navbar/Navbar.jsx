@@ -1,12 +1,20 @@
 "use client";
-
+import { motion } from "framer-motion";
 import React from "react";
 import "./_navbar.scss";
 import GetStartedButton from "../GetStartedButton/GetStartedButton";
 
 const Navbar = () => {
   return (
-    <nav className="navbar">
+    <motion.nav
+      className="navbar"
+      initial={{ y: -50, opacity: 0 }}
+      animate={{ y: 0, opacity: 1 }}
+      transition={{
+        duration: 0.2,
+        ease: "easeOut",
+      }}
+    >
       <section className="for-center-navbar">
         <img className="img-one" src="/pics/favicon.svg" alt="favicon" />
 
@@ -20,17 +28,16 @@ const Navbar = () => {
         </div>
 
         <div className="get-started-button">
-          <GetStartedButton text="Get started" 
-          dark={true} />
+          <GetStartedButton text="Get started" dark={true} />
         </div>
 
-         <ul className="one-burger-effect">
+        <ul className="one-burger-effect">
           <li>
             <i className="ri-menu-3-line"></i>
           </li>
         </ul>
       </section>
-    </nav>
+    </motion.nav>
   );
 };
 

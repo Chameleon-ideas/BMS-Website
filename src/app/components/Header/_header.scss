@@ -3,9 +3,8 @@
 
 .header {
   //   border: 2px solid red;
-  height: 100vh;
+  height: 100vh; // changed from height: 100vh
   display: flex;
-  // justify-content: center;
   align-items: center;
   flex-direction: column;
   position: relative;
@@ -54,12 +53,12 @@
 
   .for-center-header {
     // border: 2px solid green;
+    padding-top: 250px; // increase by navbar height + 30-50px extra
     max-width: 1600px;
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-top: 200px;
 
     @include breakpoint(tablet-lg) {
       padding-top: 160px;
@@ -185,7 +184,7 @@
           padding-top: 30px;
         }
 
-        @include breakpoint(mobile-xxs){
+        @include breakpoint(mobile-xxs) {
           width: 80%;
         }
       }
@@ -291,7 +290,7 @@
       left: 50px;
     }
 
-     @include breakpoint(mobile-lg) {
+    @include breakpoint(mobile-lg) {
       display: none;
     }
 
@@ -350,7 +349,7 @@
       left: 170px;
     }
 
-     @include breakpoint(mobile-lg) {
+    @include breakpoint(mobile-lg) {
       display: none;
     }
 
@@ -386,7 +385,7 @@
       top: 150px;
       right: 400px;
     }
- @include breakpoint(mobile-lg) {
+    @include breakpoint(mobile-lg) {
       display: none;
     }
 
@@ -478,7 +477,7 @@
       bottom: 70px;
     }
 
-     @include breakpoint(mobile-lg) {
+    @include breakpoint(mobile-lg) {
       display: none;
     }
 

@@ -1,5 +1,5 @@
 "use client";
-
+import { motion } from "framer-motion";
 import React from "react";
 import "./_main04.scss";
 import AppCard from "../AppCard/AppCard";
@@ -10,75 +10,145 @@ const Main04 = () => {
     <main className="main04">
       <section className="for-center-main04">
         <div className="section-one">
-          <div className="white-capsule-two">
+          <motion.div
+            className="white-capsule-two"
+            initial={{ opacity: 0, y: 50, filter: "blur(20px)" }}
+            whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            viewport={{ once: true, amount: 0.3 }} // triggers when 30% visible
+            style={{ filter: "blur(20px)" }}
+          >
             <h4>Integration</h4>
-          </div>
+          </motion.div>
 
-          <h2>Link up with your favorite tools</h2>
+          <motion.h2
+            initial={{ opacity: 0, y: 50, filter: "blur(20px)" }}
+            whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+            transition={{ duration: 0.7, ease: "easeOut" }}
+            viewport={{ once: true, amount: 0.3 }} // triggers when 30% visible
+            style={{ filter: "blur(20px)" }}
+          >
+            Link up with your favorite tools
+          </motion.h2>
 
-          <p>
+          <motion.p
+            initial={{ opacity: 0, y: 50, filter: "blur(20px)" }}
+            whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+            transition={{ duration: 0.6, ease: "easeOut" }}
+            viewport={{ once: true, amount: 0.3 }} // triggers when 30% visible
+            style={{ filter: "blur(20px)" }}
+          >
             We assist startups in standing out with exceptional messaging that
             effectively engages their audience.
-          </p>
+          </motion.p>
         </div>
 
         <div className="section-two">
           <div className="part-one">
-            <div className="child-one">
+            <motion.div
+              className="child-one"
+              initial={{ opacity: 0, y: 50, filter: "blur(20px)" }}
+              whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+              transition={{ duration: 0.4, ease: "easeOut" }}
+              viewport={{ once: true, amount: 0.3 }} // triggers when 30% visible
+              style={{ filter: "blur(20px)" }}
+            >
               <AppCard
                 imgSrc="/pics/zapiericon.png"
                 title="Zapier"
                 subtitle="Communication"
               />
-            </div>
+            </motion.div>
 
-            <div className="child-two">
+            <motion.div
+              className="child-two"
+              initial={{ opacity: 0, y: 50, filter: "blur(20px)" }}
+              whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+              transition={{ duration: 0.5, ease: "easeOut" }}
+              viewport={{ once: true, amount: 0.3 }} // triggers when 30% visible
+              style={{ filter: "blur(20px)" }}
+            >
               <AppCard
                 imgSrc="/pics/shopifyicon.png"
                 title="Shopify"
                 subtitle="e-commerce"
               />
-            </div>
+            </motion.div>
 
-            <div className="child-three">
+            <motion.div
+              className="child-three"
+              initial={{ opacity: 0, y: 50, filter: "blur(20px)" }}
+              whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+              transition={{ duration: 0.6, ease: "easeOut" }}
+              viewport={{ once: true, amount: 0.3 }} // triggers when 30% visible
+              style={{ filter: "blur(20px)" }}
+            >
               <AppCard
                 imgSrc="/pics/slackicon.png"
                 title="Slack"
                 subtitle="Communication"
               />
-            </div>
+            </motion.div>
           </div>
 
           <div className="part-two">
-            <div className="child-four">
+            <motion.div
+              className="child-four"
+              initial={{ opacity: 0, y: 50, filter: "blur(20px)" }}
+              whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+              transition={{ duration: 0.4, ease: "easeOut" }}
+              viewport={{ once: true, amount: 0.3 }} // triggers when 30% visible
+              style={{ filter: "blur(20px)" }}
+            >
               <AppCard
                 imgSrc="/pics/snapchat.png"
                 title="Snapchat"
                 subtitle="Messaging App"
               />
-            </div>
+            </motion.div>
 
-            <div className="child-five">
+            <motion.div
+              className="child-five"
+              initial={{ opacity: 0, y: 50, filter: "blur(20px)" }}
+              whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+              transition={{ duration: 0.5, ease: "easeOut" }}
+              viewport={{ once: true, amount: 0.3 }} // triggers when 30% visible
+              style={{ filter: "blur(20px)" }}
+            >
               <AppCard
                 imgSrc="/pics/figma2.png"
                 title="Figma"
                 subtitle="Design Tool"
               />
-            </div>
+            </motion.div>
 
-            <div className="child-six">
+            <motion.div
+              className="child-six"
+              initial={{ opacity: 0, y: 50, filter: "blur(20px)" }}
+              whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+              transition={{ duration: 0.6, ease: "easeOut" }}
+              viewport={{ once: true, amount: 0.3 }} // triggers when 30% visible
+              style={{ filter: "blur(20px)" }}
+            >
               <AppCard
                 imgSrc="/pics/tiktok.png"
                 title="Tiktok"
                 subtitle="Video Tool"
               />
-            </div>
+            </motion.div>
           </div>
         </div>
 
-        <div className="get-started-button">
+        <motion.div
+          className="get-started-button"
+          initial={{ opacity: 0, y: 50, filter: "blur(20px)" }}
+          whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          viewport={{ once: true, amount: 0.3 }} // triggers when 30% visible
+          style={{ filter: "blur(20px)" }}
+        >
           <GetStartedButton text="See in action" dark={false} />
-        </div>
+        </motion.div>
       </section>
     </main>
   );

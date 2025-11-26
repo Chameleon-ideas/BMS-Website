@@ -1,5 +1,5 @@
 "use client";
-
+import { motion } from "framer-motion";
 import React, { useState, useEffect } from "react";
 import "./_header.scss";
 import GetStartedButton from "../GetStartedButton/GetStartedButton";
@@ -61,7 +61,13 @@ const Header = () => {
       </div>
 
       <section className="for-center-header">
-        <div className="middle-div">
+        <motion.div
+          className="middle-div"
+          initial={{ opacity: 0, filter: "blur(20px)", y: 30 }}
+          whileInView={{ opacity: 1, filter: "blur(0px)", y: 0 }}
+          viewport={{ once: true}} // <-- triggers only once, 30% visible
+          transition={{ duration: 0.6, ease: "easeOut" }}
+        >
           <div className="yellow-capsule">
             <h4>Artificial intelligence solutions</h4>
           </div>
@@ -78,41 +84,90 @@ const Header = () => {
             <GetStartedButton text="Get started" />
             <GetStartedButton text="Free trial" dark={false} />
           </div>
-        </div>
+        </motion.div>
       </section>
 
       {/* Floating bubbles with parallax effect */}
-      <div className="image-one" style={getTransformStyle(25)}>
-        <FloatingBubble imgSrc="/pics/hero-shape-1.png" />
-      </div>
 
-      <div className="image-two" style={getTransformStyle(40)}>
+      <motion.div
+        className="image-one"
+        style={getTransformStyle(25)}
+        initial={{ opacity: 0, filter: "blur(20px)" }}
+        animate={{ opacity: 1, filter: "blur(0px)" }}
+        transition={{ duration: 1, ease: "easeOut" }}
+      >
         <FloatingBubble imgSrc="/pics/hero-shape-1.png" />
-      </div>
+      </motion.div>
 
-      <div className="image-three" style={getTransformStyle(30)}>
+      <motion.div
+        className="image-two"
+        style={getTransformStyle(40)}
+        initial={{ opacity: 0, filter: "blur(20px)" }}
+        animate={{ opacity: 1, filter: "blur(0px)" }}
+        transition={{ duration: 1, ease: "easeOut" }}
+      >
         <FloatingBubble imgSrc="/pics/hero-shape-1.png" />
-      </div>
+      </motion.div>
 
-      <div className="image-four" style={getTransformStyle(45)}>
+      <motion.div
+        className="image-three"
+        style={getTransformStyle(30)}
+        initial={{ opacity: 0, filter: "blur(20px)" }}
+        animate={{ opacity: 1, filter: "blur(0px)" }}
+        transition={{ duration: 1, ease: "easeOut" }}
+      >
         <FloatingBubble imgSrc="/pics/hero-shape-1.png" />
-      </div>
+      </motion.div>
 
-      <div className="image-five" style={getTransformStyle(20)}>
+      <motion.div
+        className="image-four"
+        style={getTransformStyle(45)}
+        initial={{ opacity: 0, filter: "blur(20px)" }}
+        animate={{ opacity: 1, filter: "blur(0px)" }}
+        transition={{ duration: 1, ease: "easeOut" }}
+      >
         <FloatingBubble imgSrc="/pics/hero-shape-1.png" />
-      </div>
+      </motion.div>
 
-      <div className="image-six" style={getTransformStyle(35)}>
+      <motion.div
+        className="image-five"
+        style={getTransformStyle(20)}
+        initial={{ opacity: 0, filter: "blur(20px)" }}
+        animate={{ opacity: 1, filter: "blur(0px)" }}
+        transition={{ duration: 1, ease: "easeOut" }}
+      >
         <FloatingBubble imgSrc="/pics/hero-shape-1.png" />
-      </div>
+      </motion.div>
 
-      <div className="image-seven" style={getTransformStyle(50)}>
+      <motion.div
+        className="image-six"
+        style={getTransformStyle(35)}
+        initial={{ opacity: 0, filter: "blur(20px)" }}
+        animate={{ opacity: 1, filter: "blur(0px)" }}
+        transition={{ duration: 1, ease: "easeOut" }}
+      >
         <FloatingBubble imgSrc="/pics/hero-shape-1.png" />
-      </div>
+      </motion.div>
 
-      <div className="image-eight" style={getTransformStyle(28)}>
+      <motion.div
+        className="image-seven"
+        style={getTransformStyle(50)}
+        initial={{ opacity: 0, filter: "blur(20px)" }}
+        animate={{ opacity: 1, filter: "blur(0px)" }}
+        transition={{ duration: 1, ease: "easeOut" }}
+      >
         <FloatingBubble imgSrc="/pics/hero-shape-1.png" />
-      </div>
+      </motion.div>
+
+      <motion.div
+        className="image-eight"
+        style={getTransformStyle(28)}
+        initial={{ opacity: 0, filter: "blur(20px)" }}
+        animate={{ opacity: 1, filter: "blur(0px)" }}
+        transition={{ duration: 1, ease: "easeOut" }}
+      >
+        <FloatingBubble imgSrc="/pics/hero-shape-1.png" />
+      </motion.div>
     </header>
   );
 };

@@ -25,7 +25,7 @@ const PriceCard = ({
 
       {/* Button */}
       <div className="div-two">
-        <GetStartedButton text={buttonText} width="90%" />
+        <GetStartedButton text={buttonText} width="90%"  />
       </div>
 
       {/* Features */}

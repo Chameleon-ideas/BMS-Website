@@ -3,13 +3,26 @@
 
 .navbar {
   // border: 2px solid red;
+  padding: 14px 0;
+  backdrop-filter: blur(25px);
+  -webkit-backdrop-filter: blur(25px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 65%;
+  border-radius: 50px;
+  position: fixed;
+  top: 20px;
+  // left: 50%;
+  transform: translateX(-50%);
+  z-index: 9999;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 14px 0px;
-  background-color: #f2f2f6;
-  width: 100%;
-  border-radius: 50px;
+
+  @include breakpoint(laptop) {
+    width: 80%;
+  }
 
   .for-center-navbar {
     // border: 2px solid blue;
@@ -19,12 +32,12 @@
     justify-content: space-between;
     align-items: center;
 
-    @include breakpoint(mobile-lg){
+    @include breakpoint(mobile-lg) {
       width: 90%;
     }
 
     .img-one {
-      width: 4%;
+      width: 3.5%;
 
       @include breakpoint(tablet-lg) {
         width: 5%;
@@ -38,28 +51,32 @@
         width: 7%;
       }
 
-      @include breakpoint(mobile-lg){
+      @include breakpoint(mobile-lg) {
         width: 12%;
       }
 
-      @include breakpoint(mobile){
+      @include breakpoint(mobile) {
         width: 10%;
       }
 
-      @include breakpoint(mobile-sm){
+      @include breakpoint(mobile-sm) {
         width: 11%;
       }
 
-      @include breakpoint(mobile-xxs){
+      @include breakpoint(mobile-xxs) {
         width: 12%;
       }
     }
 
     .nav-links {
-      // border: 2px solid red;
+      // border: 2px solid green;
       display: flex;
       justify-content: space-between;
       width: 45%;
+
+      @include breakpoint(desktop) {
+        width: 57%;
+      }
 
       @include breakpoint(laptop) {
         width: 55%;
@@ -76,7 +93,6 @@
     }
 
     .get-started-button {
-      // border: 2px solid green;
       width: 13%;
       display: flex;
       justify-content: flex-end;
@@ -88,20 +104,12 @@
     }
 
     .one-burger-effect {
-      // border: 2px solid red;
-      display: flex;
+      display: none;
       justify-content: center;
       align-items: center;
-      display: none;
-
-      @include breakpoint(tablet-lg){
-        display: block;
+      @include breakpoint(tablet-lg) {
+        display: flex;
       }
-
-      // @include breakpoint(tablet){
-      //   display: block;
-      // }
-     
 
       li {
         list-style-type: none;
@@ -109,22 +117,18 @@
         i {
           font-size: 28px;
           font-weight: 600;
-           display: none;
-
-           @include breakpoint(tablet-lg){
+          display: none;
+          @include breakpoint(tablet-lg) {
             display: block;
-           }
-
-          @include breakpoint(tablet-sm){
+          }
+          @include breakpoint(tablet-sm) {
             font-size: 30px;
             display: block;
           }
-
-          @include breakpoint(mobile-lg){
+          @include breakpoint(mobile-lg) {
             font-size: 30px;
           }
-
-          @include breakpoint(mobile){
+          @include breakpoint(mobile) {
             font-size: 25px;
           }
         }

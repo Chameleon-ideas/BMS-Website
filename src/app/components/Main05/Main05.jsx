@@ -1,5 +1,5 @@
 "use client";
-
+import { motion } from "framer-motion";
 import React from "react";
 import "./_main05.scss";
 import TestimonialsCard from "../TestimonialsCard/TestimonialsCard";
@@ -41,20 +41,48 @@ const Main05 = () => {
     <main className="main05">
       <section className="for-center-main05">
         <div className="upper-div-section">
-          <div className="small-yellow-capsule-three">
+          <motion.div
+            className="small-yellow-capsule-three"
+            initial={{ opacity: 0, y: 50, filter: "blur(20px)" }}
+            whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+            transition={{ duration: 0.6, ease: "easeOut" }}
+            viewport={{ once: true, amount: 0.3 }} // triggers when 30% visible
+            style={{ filter: "blur(20px)" }}
+          >
             <h4>Customer success</h4>
-          </div>
+          </motion.div>
 
-          <h3>Real apps. Real results.</h3>
+          <motion.h3
+            initial={{ opacity: 0, y: 50, filter: "blur(20px)" }}
+            whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+            transition={{ duration: 0.7, ease: "easeOut" }}
+            viewport={{ once: true, amount: 0.3 }} // triggers when 30% visible
+            style={{ filter: "blur(20px)" }}
+          >
+            Real apps. Real results
+          </motion.h3>
 
-          <p>
+          <motion.p
+            initial={{ opacity: 0, y: 50, filter: "blur(20px)" }}
+            whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            viewport={{ once: true, amount: 0.3 }} // triggers when 30% visible
+            style={{ filter: "blur(20px)" }}
+          >
             "Real apps. Real results. NextSaaS delivered our entire platform
-            ahead of schedule—flawless execution and real partnership."
-          </p>
+            ahead of schedule—flawless execution and real partnership"
+          </motion.p>
         </div>
 
         {/* Scrollable Testimonials */}
-        <div className="lower-div-section">
+        <motion.div
+          className="lower-div-section"
+          initial={{ opacity: 0, y: 50, filter: "blur(20px)" }}
+          whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+          transition={{ duration: 0.9, ease: "easeOut" }}
+          viewport={{ once: true, amount: 0.3 }} // triggers when 30% visible
+          style={{ filter: "blur(20px)" }}
+        >
           <div className="scroll-container">
             <div className="scroll-track">
               {testimonials.map((t) => (
@@ -65,11 +93,18 @@ const Main05 = () => {
               ))}
             </div>
           </div>
-        </div>
+        </motion.div>
 
-        <div className="handling-button">
+        <motion.div
+          className="handling-button"
+          initial={{ opacity: 0, y: 50, filter: "blur(20px)" }}
+          whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+          transition={{ duration: 0.9, ease: "easeOut" }}
+          viewport={{ once: true, amount: 0.3 }} // triggers when 30% visible
+          style={{ filter: "blur(20px)" }}
+        >
           <GetStartedButton text="View all reviews" />
-        </div>
+        </motion.div>
       </section>
     </main>
   );

@@ -1,5 +1,5 @@
 "use client";
-
+import { motion } from "framer-motion";
 import React from "react";
 import "./_main06.scss";
 import PriceCard from "../PriceCard/PriceCard";
@@ -8,13 +8,35 @@ const Main06 = () => {
   return (
     <div className="main06">
       <section className="for-center-main06">
-        <div className="small-yellow-capsule-four">
+        <motion.div
+          className="small-yellow-capsule-four"
+          initial={{ opacity: 0, y: 50, filter: "blur(20px)" }}
+          whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+          transition={{ duration: 0.5, ease: "easeOut" }}
+          viewport={{ once: true, amount: 0.3 }} // triggers when 30% visible
+          style={{ filter: "blur(20px)" }}
+        >
           <h4>Our pricing</h4>
-        </div>
+        </motion.div>
 
-        <h6>Select the pricing plan that best suits your needs</h6>
+        <motion.h6
+          initial={{ opacity: 0, y: 50, filter: "blur(20px)" }}
+          whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
+          viewport={{ once: true, amount: 0.3 }} // triggers when 30% visible
+          style={{ filter: "blur(20px)" }}
+        >
+          Select the pricing plan that best suits your needs
+        </motion.h6>
 
-        <div className="handling-price-card">
+        <motion.div
+          className="handling-price-card"
+          initial={{ opacity: 0, y: 50, filter: "blur(20px)" }}
+          whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+          transition={{ duration: 0.7, ease: "easeOut" }}
+          viewport={{ once: true, amount: 0.3 }} // triggers when 30% visible
+          style={{ filter: "blur(20px)" }}
+        >
           <div className="price-card-one">
             <PriceCard
               title="Simplified"
@@ -61,7 +83,7 @@ const Main06 = () => {
               ]}
             />
           </div>
-        </div>
+        </motion.div>
       </section>
     </div>
   );
