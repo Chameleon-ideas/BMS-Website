@@ -16,7 +16,7 @@ const Footer = () => {
               initial={{ opacity: 0, y: 50, filter: "blur(20px)" }}
               whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
               transition={{ duration: 0.7, ease: "easeOut" }}
-              // viewport={{ once: true, amount: 0.3 }} // triggers when 30% visible
+              viewport={{ once: true, amount: 0.3 }} // triggers when 30% visible
               style={{ filter: "blur(20px)" }}
             >
               Build a complete website using the assistance
@@ -26,7 +26,7 @@ const Footer = () => {
               initial={{ opacity: 0, y: 50, filter: "blur(20px)" }}
               whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
               transition={{ duration: 0.8, ease: "easeOut" }}
-              // viewport={{ once: true, amount: 0.3 }} // triggers when 30% visible
+              viewport={{ once: true, amount: 0.3 }} // triggers when 30% visible
               style={{ filter: "blur(20px)" }}
             >
               Start your free trial today and see your ideas come to life easily
@@ -40,7 +40,7 @@ const Footer = () => {
               initial={{ opacity: 0, y: 50, filter: "blur(20px)" }}
               whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
               transition={{ duration: 0.8, ease: "easeOut" }}
-              // viewport={{ once: true, amount: 0.3 }} // triggers when 30% visible
+              viewport={{ once: true, amount: 0.3 }} // triggers when 30% visible
               style={{ filter: "blur(20px)" }}
             >
               <input
@@ -59,7 +59,7 @@ const Footer = () => {
                 initial={{ opacity: 0, y: 50, filter: "blur(20px)" }}
                 whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
                 transition={{ duration: 0.7, ease: "easeOut" }}
-                // viewport={{ once: true, amount: 0.3 }} // triggers when 30% visible
+                viewport={{ once: true, amount: 0.3 }} // triggers when 30% visible
                 style={{ filter: "blur(20px)" }}
               >
                 <i className="ri-check-line"></i>No credit card required
@@ -69,7 +69,7 @@ const Footer = () => {
                 initial={{ opacity: 0, y: 50, filter: "blur(20px)" }}
                 whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
                 transition={{ duration: 0.6, ease: "easeOut" }}
-                // viewport={{ once: true, amount: 0.3 }} // triggers when 30% visible
+                viewport={{ once: true, amount: 0.3 }} // triggers when 30% visible
                 style={{ filter: "blur(20px)" }}
               >
                 <i className="ri-check-line"></i>14-Day free trial
@@ -86,7 +86,7 @@ const Footer = () => {
             initial={{ opacity: 0, y: 50, filter: "blur(20px)" }}
             whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
             transition={{ duration: 0.6, ease: "easeOut" }}
-            // viewport={{ once: true, amount: 0.3 }} // triggers when 30% visible
+            viewport={{ once: true, amount: 0.3 }} // triggers when 30% visible
             style={{ filter: "blur(20px)" }}
           >
             <img src="/pics/dark-logo.svg" alt="logo" />
@@ -115,7 +115,7 @@ const Footer = () => {
               initial={{ opacity: 0, y: 50, filter: "blur(20px)" }}
               whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
               transition={{ duration: 0.6, ease: "easeOut" }}
-              // viewport={{ once: true, amount: 0.3 }} // triggers when 30% visible
+              viewport={{ once: true, amount: 0.3 }} // triggers when 30% visible
               style={{ filter: "blur(20px)" }}
             >
               <h3>Company</h3>
@@ -134,7 +134,7 @@ const Footer = () => {
               initial={{ opacity: 0, y: 50, filter: "blur(20px)" }}
               whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
               transition={{ duration: 0.6, ease: "easeOut" }}
-              // viewport={{ once: true, amount: 0.3 }} // triggers when 30% visible
+              viewport={{ once: true, amount: 0.3 }} // triggers when 30% visible
               style={{ filter: "blur(20px)" }}
             >
               <h3>Support</h3>
@@ -153,7 +153,7 @@ const Footer = () => {
               initial={{ opacity: 0, y: 50, filter: "blur(20px)" }}
               whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
               transition={{ duration: 0.6, ease: "easeOut" }}
-              // viewport={{ once: true, amount: 0.3 }} // triggers when 30% visible
+              viewport={{ once: true, amount: 0.3 }} // triggers when 30% visible
               style={{ filter: "blur(20px)" }}
             >
               <h3>Legal Policies</h3>
